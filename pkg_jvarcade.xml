@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="3.4" method="upgrade">
     <name>jVArcade Package</name>
-    <creationDate>2016-02-18</creationDate>
+    <creationDate>2016-03-27</creationDate>
     <author>jVitals Team</author>
-    <authorEmail>admin@jvitals.com</authorEmail>
-    <authorUrl>http://www.jvitals.com</authorUrl>
+    <authorEmail>admin@polynamaude.com</authorEmail>
+    <authorUrl>http://www.polynamaude.com</authorUrl>
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-	<copyright>(C) All rights reserved. 2011-2014 jVitals.com</copyright>
-    <version>2.13</version>
+	<copyright>(C) All rights reserved. 2011-2014</copyright>
+    <version>2.15</version>
     <packagename>jvarcade</packagename>
     <description>A Joomla Arcade Component</description>
 	<scriptfile>pkg.install.php</scriptfile>

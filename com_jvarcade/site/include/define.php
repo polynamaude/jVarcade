@@ -13,7 +13,7 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-define('JVA_VERSION', '2.14');
+define('JVA_VERSION', '2.15');
 
 // File system paths
 @define('JVA_CSS_INCPATH', JPATH_ROOT . '/components/com_jvarcade/css/');
