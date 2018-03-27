@@ -15,17 +15,17 @@ defined('_JEXEC') or die('Restricted access');
 class jvarcadeViewCpanel extends JViewLegacy {
 
 	function display($tpl = null) {
-		
+
 		$mainframe = JFactory::getApplication('site');
 		$model = $this->getModel();
-		
+
 		$task = $mainframe->input->get('task', 'cpanel');
 		$this->task = $task;
-		
+
 		// config
 		$config = $model->getConfObj();
 		$this->config = $config;
-		
+
 		// stats
 		$games_count = $model->getGamesCount();
 		$this->games_count = $games_count;
@@ -35,9 +35,9 @@ class jvarcadeViewCpanel extends JViewLegacy {
 		$this->latest_scores = $latest_scores;
 		$latest_games = $model->getLatestGames();
 		$this->latest_games = $latest_games;
-		
-		
-		
+
+
+
 		// plugin checks
 		$sysplg_installed = JPluginHelper::isEnabled('system', 'jvarcade');
 		$this->sysplg_installed = $sysplg_installed;
@@ -46,13 +46,13 @@ class jvarcadeViewCpanel extends JViewLegacy {
 		}
 		$plugins = JPluginHelper::getPlugin('jvarcade');
 		$this->plugins = $plugins;
-		
+
 		// changelog
 		$changelog = $model->getChangeLog();
 		$this->changelog = $changelog;
-		
+
 		JToolBarHelper::title(JText::_('COM_JVARCADE_CPANEL'), 'jvacpanel');
-		
+
 		$dashboard_buttons = array (
 			'SETTINGS' => array(
 				'link' => JRoute::_('index.php?option=com_jvarcade&task=settings'),
@@ -99,17 +99,17 @@ class jvarcadeViewCpanel extends JViewLegacy {
 				'icon' => 'rss.png',
 				'label' => JText::_('COM_JVARCADE_RSS')
 			),
-			'SUPPORT' => array(
-				'link' => 'http://www.jvitals.com/support/support-forum/default-forum/14-jvarcade.html',
-				'icon' => 'user_48.png',
-				'label' => JText::_('COM_JVARCADE_SUPPORT'),
-				'target' => '_blank'
-			),
+//			'SUPPORT' => array(
+//				'link' => 'http://www.jvitals.com/support/support-forum/default-forum/14-jvarcade.html',
+//				'icon' => 'user_48.png',
+//				'label' => JText::_('COM_JVARCADE_SUPPORT'),
+//				'target' => '_blank'
+//			),
 		);
 		$this->dashboard_buttons = $dashboard_buttons;
-		
+
 		parent::display($tpl);
 	}
-	
+
 
 }
